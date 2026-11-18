@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Memoriando: juego de memoria con tarjetas, sonidos y temporizador - UAEMéx Preparatoria.">
+    <title>Juego de Memoria | UAEMéx Preparatoria - Diana</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado Institucional UAEMéx -->
+    <header class="header-uaem">
+        <div class="contenedor-header">
+            <div class="logo-espacio" title="Espacio para colocar el logotipo oficial de la UAEMéx">
+                <div class="logo-uaem-marco">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#004A2F" stroke="#C5A059" stroke-width="4"/>
+                        <path d="M50 18 L76 33 L76 67 L50 82 L24 67 L24 33 Z" fill="none" stroke="#C5A059" stroke-width="3"/>
+                        <text x="50" y="47" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">UAEM</text>
+                        <text x="50" y="62" font-size="9" fill="#f7dfa5" text-anchor="middle">1828</text>
+                    </svg>
+                </div>
+                <div class="texto-logo">
+                    <span class="institucion">UAEMéx</span>
+                    <span class="sub-institucion">Nivel Preparatoria &bull; Página 3: Memoria</span>
+                </div>
+            </div>
+
+            <!-- Navegación -->
+            <nav>
+                <a href="index.html" class="nav-enlace-inicio">Inicio</a>
+                <a href="crucigrama.html" class="nav-enlace-inicio">Crucigrama</a>
+                <a href="memoria.html" class="nav-enlace-inicio activo">Memoria</a>
+                <a href="sopa.html" class="nav-enlace-inicio">Sopa de Letras</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal del Juego -->
+    <main class="contenedor-principal">
+        <h2 class="titulo-juego">🧠 Memoriando 🃏</h2>
+        <p class="subtitulo">Desarrollado por: Diana &bull; ¡Encuentra todas las parejas antes de que se acabe el tiempo!</p>
+
+        <section class="panel" id="seccion-menu" aria-labelledby="t-menu">
+            <h3 id="t-menu" style="text-align:center; color:#004A2F; margin-bottom:15px;">Configura tu partida</h3>
+            <div class="menu">
+                <div>
+                    <label for="dificultad">Dificultad</label>
+                    <select id="dificultad">
+                        <option value="facil">Fácil</option>
+                        <option value="medio">Medio</option>
+                        <option value="dificil">Difícil</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="num-cartas">Número de tarjetas</label>
+                    <select id="num-cartas"></select>
+                </div>
+                <div>
+                    <label for="tema">Temática</label>
+                    <select id="tema">
+                        <option value="frutas">🍎 Frutas</option>
+                        <option value="animales">🐶 Animales</option>
+                        <option value="musica">🎸 Música</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="t-memorizar">Tiempo para memorizar</label>
+                    <select id="t-memorizar">
+                        <option value="3">3 segundos</option>
+                        <option value="5" selected>5 segundos</option>
+                        <option value="10">10 segundos</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="limite">Límite de tiempo</label>
+                    <select id="limite">
+                        <option value="0">Sin límite</option>
+                        <option value="30">30 segundos</option>
+                        <option value="60" selected>60 segundos</option>
+                        <option value="90">90 segundos</option>
+                        <option value="120">120 segundos</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="sonido">Sonido</label>
+                    <select id="sonido">
+                        <option value="1">Activado</option>
+                        <option value="0">Desactivado</option>
+                    </select>
+                    <label for="volumen" style="margin-top:8px">Volumen</label>
+                    <input type="range" id="volumen" min="10" max="100" value="60">
+                </div>
+            </div>
+            <p class="mensaje error" id="error" aria-live="polite"></p>
+            <div class="botonera">
+                <button class="boton" id="btn-jugar">¡Jugar!</button>
+            </div>
+        </section>
+
+        <section class="panel oculto" id="seccion-juego" aria-label="Tablero de juego">
+            <div class="info-juego">
+                <span class="reloj" id="reloj" aria-live="off">⏱ 00:00</span>
+                <span id="estado" aria-live="polite">Memoriza las tarjetas</span>
+                <span id="aciertos">Parejas: 0</span>
+            </div>
+            <div class="tablero" id="tablero"></div>
+        </section>
+    </main>
+
+    <!-- Modal Fin de Juego -->
+    <div class="fin oculto" id="fin" role="dialog" aria-modal="true" aria-labelledby="fin-titulo">
+        <div class="fin-caja">
+            <h2 id="fin-titulo"></h2>
+            <p id="fin-texto"></p>
+            <div class="botones">
+                <button class="boton" id="btn-seguir">Seguir jugando</button>
+                <a class="boton oro" href="index.html">Volver al inicio</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de Página Institucional -->
+    <footer class="footer-uaem">
+        <p><strong>Universidad Autónoma del Estado de México</strong> &bull; Plantel de la Escuela Preparatoria</p>
+        <div class="autores-lista">
+            <span class="autor-item">🧩 Crucigrama: <strong>Carlos Solano</strong></span>
+            <span class="autor-item">🃏 Memoria: <strong>Diana</strong></span>
+            <span class="autor-item">🔍 Sopa de letras: <strong>Dylan</strong></span>
+        </div>
+    </footer>
+
+    <script src="js/memoria.js"></script>
+</body>
+</html>

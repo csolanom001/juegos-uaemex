@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sopa de letras para practicar la atención y la agilidad mental - UAEMéx Preparatoria.">
+    <title>Sopa de Letras | UAEMéx Preparatoria - Dylan</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado Institucional UAEMéx -->
+    <header class="header-uaem">
+        <div class="contenedor-header">
+            <div class="logo-espacio" title="Espacio para colocar el logotipo oficial de la UAEMéx">
+                <div class="logo-uaem-marco">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="45" fill="#004A2F" stroke="#C5A059" stroke-width="4"/>
+                        <path d="M50 18 L76 33 L76 67 L50 82 L24 67 L24 33 Z" fill="none" stroke="#C5A059" stroke-width="3"/>
+                        <text x="50" y="47" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">UAEM</text>
+                        <text x="50" y="62" font-size="9" fill="#f7dfa5" text-anchor="middle">1828</text>
+                    </svg>
+                </div>
+                <div class="texto-logo">
+                    <span class="institucion">UAEMéx</span>
+                    <span class="sub-institucion">Nivel Preparatoria &bull; Página 4: Sopa de Letras</span>
+                </div>
+            </div>
+
+            <!-- Navegación -->
+            <nav>
+                <a href="index.html" class="nav-enlace-inicio">Inicio</a>
+                <a href="crucigrama.html" class="nav-enlace-inicio">Crucigrama</a>
+                <a href="memoria.html" class="nav-enlace-inicio">Memoria</a>
+                <a href="sopa.html" class="nav-enlace-inicio activo">Sopa de Letras</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal del Juego -->
+    <main class="contenedor-principal">
+        <section class="panel" aria-labelledby="t-sopa">
+            <h2 id="t-sopa" class="titulo-juego">🔍 Sopa de Letras 🔤</h2>
+            <p class="subtitulo">Desarrollado por: Dylan &bull; Haz clic en la primera letra de una palabra y luego en la última para marcarla.</p>
+            
+            <table class="sopa" id="tablero-sopa" aria-label="Tablero de la sopa de letras"></table>
+            
+            <h3 style="text-align:center; color:#004A2F; margin-top:15px; font-size:1.1rem;">Palabras por encontrar:</h3>
+            <ul class="lista-palabras" id="lista" aria-label="Palabras por encontrar"></ul>
+            
+            <p class="mensaje" id="mensaje" aria-live="polite"></p>
+            
+            <div class="botonera">
+                <button class="boton" id="btn-nueva">Nueva sopa</button>
+                <a class="boton oro" href="index.html">Volver al inicio</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página Institucional -->
+    <footer class="footer-uaem">
+        <p><strong>Universidad Autónoma del Estado de México</strong> &bull; Plantel de la Escuela Preparatoria</p>
+        <div class="autores-lista">
+            <span class="autor-item">🧩 Crucigrama: <strong>Carlos Solano</strong></span>
+            <span class="autor-item">🃏 Memoria: <strong>Diana</strong></span>
+            <span class="autor-item">🔍 Sopa de letras: <strong>Dylan</strong></span>
+        </div>
+    </footer>
+
+    <script src="js/sopa.js"></script>
+</body>
+</html>

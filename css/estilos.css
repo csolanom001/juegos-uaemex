@@ -95,11 +95,25 @@ body {
     padding: 8px 18px;
     border-radius: 20px;
     transition: background-color 0.2s, color 0.2s;
+    display: inline-block;
 }
 
 .nav-enlace-inicio:hover {
     background-color: #C5A059;
     color: #004A2F;
+}
+
+.nav-enlace-inicio.activo {
+    background-color: #C5A059;
+    color: #004A2F;
+    font-weight: 700;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
 }
 
 /* Contenido Principal */
@@ -682,4 +696,289 @@ form:has(#radio-personajes:checked) .panel-personajes {
         flex-direction: column;
         gap: 8px;
     }
+}
+
+/* ==========================================================================
+   ESTILOS COMPARTIDOS PARA JUEGOS: MEMORIA Y SOPA DE LETRAS
+   ========================================================================== */
+.panel {
+    background: #ffffff;
+    border: 3px solid #C5A059;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 74, 47, 0.08);
+    margin-bottom: 25px;
+}
+
+.titulo-juego {
+    text-align: center;
+    color: #004A2F;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    margin: 0 0 8px;
+    font-weight: 800;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #555555;
+    margin: 0 0 20px;
+    font-size: 1rem;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.menu label {
+    display: block;
+    font-weight: bold;
+    color: #004A2F;
+    margin-bottom: 4px;
+}
+
+.menu select, .menu input[type=range] {
+    width: 100%;
+    padding: 8px 10px;
+    border: 2px solid #004A2F;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: #fff;
+}
+
+.mensaje {
+    text-align: center;
+    font-weight: bold;
+    min-height: 1.5em;
+    font-size: 1.1rem;
+    margin: 12px 0;
+    color: #004A2F;
+}
+
+.mensaje.error, .error {
+    color: #b00020;
+}
+
+.info-juego {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #004A2F;
+    margin-bottom: 16px;
+}
+
+.reloj {
+    background: #004A2F;
+    color: #f7dfa5;
+    padding: 6px 18px;
+    border-radius: 20px;
+    border: 2px solid #C5A059;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* Tablero y cartas de Memoria */
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 110px));
+    justify-content: center;
+    gap: 12px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.carta {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    aspect-ratio: 1/1;
+    perspective: 700px;
+    cursor: pointer;
+}
+
+.carta .interior {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.carta.volteada .interior {
+    transform: rotateY(180deg);
+}
+
+.carta .cara {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #C5A059;
+}
+
+.carta .frente {
+    background: #004A2F;
+    color: #f7dfa5;
+    font-size: 2.2rem;
+}
+
+.carta .reverso {
+    background: #ffffff;
+    font-size: clamp(2rem, 5vw, 3rem);
+    transform: rotateY(180deg);
+}
+
+.carta.acertada .reverso {
+    background: #f7dfa5;
+    border-color: #004A2F;
+}
+
+/* Modal fin de juego */
+.fin {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 16px;
+}
+
+.fin-caja {
+    background: #ffffff;
+    border: 5px solid #C5A059;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    max-width: 440px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.fin-caja h2 {
+    color: #004A2F;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.fin-caja .botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Botones para los juegos */
+.boton {
+    display: inline-block;
+    background: #004A2F;
+    color: #ffffff;
+    border: 2px solid #C5A059;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.boton:hover {
+    background: #006338;
+}
+
+.boton.oro {
+    background: #C5A059;
+    color: #004A2F;
+    border-color: #004A2F;
+}
+
+.boton.oro:hover {
+    background: #d4af37;
+}
+
+.botonera {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Sopa de letras */
+.sopa {
+    border-collapse: collapse;
+    margin: 0 auto 20px;
+    user-select: none;
+}
+
+.sopa td {
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    border: 1.5px solid #C5A059;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #004A2F;
+    cursor: pointer;
+    background: #ffffff;
+    padding: 0;
+    transition: background-color 0.15s;
+}
+
+.sopa td:hover {
+    background: #f7dfa5;
+}
+
+.sopa td.inicio {
+    background: #C5A059;
+    color: #ffffff;
+}
+
+.sopa td.hallada {
+    background: #004A2F;
+    color: #ffffff;
+}
+
+.lista-palabras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.lista-palabras li {
+    background: #fdf5e2;
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-weight: bold;
+    color: #004A2F;
+    border: 1.5px solid #C5A059;
+    font-size: 0.95rem;
+}
+
+.lista-palabras li.hallada {
+    background: #004A2F;
+    color: #ffffff;
+    text-decoration: line-through;
+    border-color: #004A2F;
 }
