@@ -76,99 +76,110 @@
 
                     <!-- ==============================================================
                          PANEL 1: FRUTAS Y VERDURAS
+                         Cuadrícula 10 x 8
+                         1H MANZANA (fila 1, col 1)   2H ZANAHORIA (fila 6, col 2)
+                         3V MANGO   (col 1, fila 1)   4V AGUACATE  (col 5, fila 1)
                          ============================================================== -->
                     <div class="panel-frutas" id="panel-frutas" style="display: block;">
                         <div class="contenedor-layout-crucigrama">
-                            
+
                             <!-- Columna Central: Crucigrama -->
                             <div class="columna-crucigrama">
                                 <h3 style="color:#004A2F; margin-bottom: 10px;">Tablero de Crucigrama</h3>
                                 <p style="font-size:0.85rem; color:#555; margin-bottom:10px;">Guíate con las casillas numeradas:</p>
-                                
-                                <div class="cuadricula-crucigrama" style="grid-template-columns: repeat(9, 38px);">
-                                    <!-- Fila 1: MANZANA (Horizontal 1) -->
-                                    <div class="celda-letra"><span class="numero-pista">1,3</span>M</div>
-                                    <div class="celda-letra">A</div>
-                                    <div class="celda-letra">N</div>
-                                    <div class="celda-letra">Z</div>
-                                    <div class="celda-letra"><span class="numero-pista">4</span>A</div>
-                                    <div class="celda-letra">N</div>
-                                    <div class="celda-letra">A</div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-vacia"></div>
 
-                                    <!-- Fila 2: Intersección con V3 (A) y V4 (G) -->
-                                    <div class="celda-letra">A</div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-letra">G</div>
-                                    <div class="celda-vacia"></div>
+                                <div class="cuadricula-crucigrama" style="grid-template-columns: repeat(10, 38px);">
+                                    <!-- Fila 1: MANZANA (1H), inicio de MANGO (3V) y AGUACATE (4V) -->
+                                    <div class="celda-letra" data-letra="M"><span class="numero-pista">1,3</span></div>
+                                    <div class="celda-letra" data-letra="A"></div>
+                                    <div class="celda-letra" data-letra="N"></div>
+                                    <div class="celda-letra" data-letra="Z"></div>
+                                    <div class="celda-letra" data-letra="A"><span class="numero-pista">4</span></div>
+                                    <div class="celda-letra" data-letra="N"></div>
+                                    <div class="celda-letra" data-letra="A"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
 
-                                    <!-- Fila 3: Intersección con V3 (N) y V4 (U) -->
-                                    <div class="celda-letra">N</div>
+                                    <!-- Fila 2: MANGO (A) y AGUACATE (G) -->
+                                    <div class="celda-letra" data-letra="A"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
-                                    <div class="celda-letra">U</div>
+                                    <div class="celda-letra" data-letra="G"></div>
+                                    <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
 
-                                    <!-- Fila 4: Intersección con V3 (G) y V4 (A) -->
-                                    <div class="celda-letra">G</div>
+                                    <!-- Fila 3: MANGO (N) y AGUACATE (U) -->
+                                    <div class="celda-letra" data-letra="N"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
-                                    <div class="celda-letra">A</div>
+                                    <div class="celda-letra" data-letra="U"></div>
                                     <div class="celda-vacia"></div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-vacia"></div>
-
-                                    <!-- Fila 5: Intersección con V3 (O) y V4 (C) -->
-                                    <div class="celda-letra">O</div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-letra">C</div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
 
-                                    <!-- Fila 6: ZANAHORIA (Horizontal 2) e intersección V4 (A) -->
-                                    <div class="celda-letra"><span class="numero-pista">2</span>Z</div>
-                                    <div class="celda-letra">A</div>
-                                    <div class="celda-letra">N</div>
-                                    <div class="celda-letra">A</div>
-                                    <div class="celda-letra">H</div>
-                                    <div class="celda-letra">O</div>
-                                    <div class="celda-letra">R</div>
-                                    <div class="celda-letra">I</div>
-                                    <div class="celda-letra">A</div>
-
-                                    <!-- Fila 7: Continuación V4 (T) -->
+                                    <!-- Fila 4: MANGO (G) y AGUACATE (A) -->
+                                    <div class="celda-letra" data-letra="G"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="A"></div>
                                     <div class="celda-vacia"></div>
-                                    <div class="celda-letra">T</div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
 
-                                    <!-- Fila 8: Terminación V4 (E) -->
+                                    <!-- Fila 5: MANGO (O) y AGUACATE (C) -->
+                                    <div class="celda-letra" data-letra="O"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="C"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
-                                    <div class="celda-letra">E</div>
+                                    <div class="celda-vacia"></div>
+
+                                    <!-- Fila 6: ZANAHORIA (2H), cruza AGUACATE en la A -->
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="Z"><span class="numero-pista">2</span></div>
+                                    <div class="celda-letra" data-letra="A"></div>
+                                    <div class="celda-letra" data-letra="N"></div>
+                                    <div class="celda-letra" data-letra="A"></div>
+                                    <div class="celda-letra" data-letra="H"></div>
+                                    <div class="celda-letra" data-letra="O"></div>
+                                    <div class="celda-letra" data-letra="R"></div>
+                                    <div class="celda-letra" data-letra="I"></div>
+                                    <div class="celda-letra" data-letra="A"></div>
+
+                                    <!-- Fila 7: AGUACATE (T) -->
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="T"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+
+                                    <!-- Fila 8: AGUACATE (E) -->
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="E"></div>
+                                    <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
@@ -179,13 +190,13 @@
                             <!-- Columna Lateral: Definiciones y Campos de Respuesta -->
                             <div class="columna-definiciones">
                                 <h3>Definiciones: Frutas y Verduras</h3>
-                                
+
                                 <div class="bloque-pista">
                                     <div class="titulo-pista">1. Horizontal (7 letras)</div>
-                                    <div class="texto-pista">Fruta de pulpa crujiente de color rojo o verde, famosa en la ciencia por la manzana de Newton.</div>
+                                    <div class="texto-pista">Fruta de pulpa crujiente de color rojo o verde; según la anécdota, una le cayó a Newton y lo hizo pensar en la gravedad.</div>
                                     <div class="campo-respuesta">
                                         <label for="f_p1">Respuesta:</label>
-                                        <input type="text" id="f_p1" name="f_p1" placeholder="EJ: MANZANA" maxlength="15">
+                                        <input type="text" id="f_p1" name="f_p1" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
 
@@ -194,7 +205,7 @@
                                     <div class="texto-pista">Hortaliza de raíz color naranja, rica en betacaroteno y vitamina A, favorita de los conejos.</div>
                                     <div class="campo-respuesta">
                                         <label for="f_p2">Respuesta:</label>
-                                        <input type="text" id="f_p2" name="f_p2" placeholder="EJ: ZANAHORIA" maxlength="15">
+                                        <input type="text" id="f_p2" name="f_p2" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
 
@@ -203,7 +214,7 @@
                                     <div class="texto-pista">Fruta tropical dulce y jugosa, de cáscara rojiza o amarilla y pulpa de color amarillo intenso con un gran hueso central.</div>
                                     <div class="campo-respuesta">
                                         <label for="f_p3">Respuesta:</label>
-                                        <input type="text" id="f_p3" name="f_p3" placeholder="EJ: MANGO" maxlength="15">
+                                        <input type="text" id="f_p3" name="f_p3" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
 
@@ -212,7 +223,7 @@
                                     <div class="texto-pista">Fruto cremoso verde de origen mexicano, ingrediente estrella para preparar un delicioso guacamole.</div>
                                     <div class="campo-respuesta">
                                         <label for="f_p4">Respuesta:</label>
-                                        <input type="text" id="f_p4" name="f_p4" placeholder="EJ: AGUACATE" maxlength="15">
+                                        <input type="text" id="f_p4" name="f_p4" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
                             </div>
@@ -222,64 +233,93 @@
 
                     <!-- ==============================================================
                          PANEL 2: VALORES Y SENTIMIENTOS
+                         Cuadrícula 8 x 8
+                         1H RESPETO (fila 2, col 1)   2H EMPATIA (fila 6, col 2)
+                         3V LEALTAD (col 5, fila 1)   4V AMOR    (col 3, fila 5)
                          ============================================================== -->
                     <div class="panel-valores" id="panel-valores">
                         <div class="contenedor-layout-crucigrama">
-                            
+
                             <!-- Columna Central: Crucigrama -->
                             <div class="columna-crucigrama">
                                 <h3 style="color:#004A2F; margin-bottom: 10px;">Tablero de Crucigrama</h3>
                                 <p style="font-size:0.85rem; color:#555; margin-bottom:10px;">Guíate con las casillas numeradas:</p>
-                                
-                                <div class="cuadricula-crucigrama" style="grid-template-columns: repeat(7, 38px);">
-                                    <!-- Fila 1: RESPETO (Horizontal 1) -->
-                                    <div class="celda-letra"><span class="numero-pista">1</span>R</div>
-                                    <div class="celda-letra">E</div>
-                                    <div class="celda-letra">S</div>
-                                    <div class="celda-letra">P</div>
-                                    <div class="celda-letra"><span class="numero-pista">3</span>E</div>
-                                    <div class="celda-letra">T</div>
-                                    <div class="celda-letra">O</div>
 
-                                    <!-- Fila 2: Intersección V3 (L) -->
+                                <div class="cuadricula-crucigrama" style="grid-template-columns: repeat(8, 38px);">
+                                    <!-- Fila 1: inicio de LEALTAD (3V) -->
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
-                                    <div class="celda-letra">A</div>
+                                    <div class="celda-letra" data-letra="L"><span class="numero-pista">3</span></div>
+                                    <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
 
-                                    <!-- Fila 3: EMPATIA (Horizontal 2) e intersección V3 (L) y V4 (A) -->
-                                    <div class="celda-letra"><span class="numero-pista">2,4</span>E</div>
-                                    <div class="celda-letra">M</div>
-                                    <div class="celda-letra">P</div>
-                                    <div class="celda-letra">A</div>
-                                    <div class="celda-letra">T</div>
-                                    <div class="celda-letra">I</div>
-                                    <div class="celda-letra">A</div>
-
-                                    <!-- Fila 4: Intersección V4 (M) y V3 (A) -->
-                                    <div class="celda-letra">M</div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-letra">A</div>
-                                    <div class="celda-vacia"></div>
+                                    <!-- Fila 2: RESPETO (1H), cruza LEALTAD en la E -->
+                                    <div class="celda-letra" data-letra="R"><span class="numero-pista">1</span></div>
+                                    <div class="celda-letra" data-letra="E"></div>
+                                    <div class="celda-letra" data-letra="S"></div>
+                                    <div class="celda-letra" data-letra="P"></div>
+                                    <div class="celda-letra" data-letra="E"></div>
+                                    <div class="celda-letra" data-letra="T"></div>
+                                    <div class="celda-letra" data-letra="O"></div>
                                     <div class="celda-vacia"></div>
 
-                                    <!-- Fila 5: Intersección V4 (O) y V3 (D) -->
-                                    <div class="celda-letra">O</div>
+                                    <!-- Fila 3: LEALTAD (A) -->
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
-                                    <div class="celda-letra">D</div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="A"></div>
+                                    <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
 
-                                    <!-- Fila 6: Intersección V4 (R) -->
-                                    <div class="celda-letra">R</div>
+                                    <!-- Fila 4: LEALTAD (L) -->
                                     <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="L"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+
+                                    <!-- Fila 5: inicio de AMOR (4V) y LEALTAD (T) -->
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="A"><span class="numero-pista">4</span></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="T"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+
+                                    <!-- Fila 6: EMPATIA (2H), cruza AMOR en la M y LEALTAD en la A -->
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="E"><span class="numero-pista">2</span></div>
+                                    <div class="celda-letra" data-letra="M"></div>
+                                    <div class="celda-letra" data-letra="P"></div>
+                                    <div class="celda-letra" data-letra="A"></div>
+                                    <div class="celda-letra" data-letra="T"></div>
+                                    <div class="celda-letra" data-letra="I"></div>
+                                    <div class="celda-letra" data-letra="A"></div>
+
+                                    <!-- Fila 7: AMOR (O) y LEALTAD (D) -->
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="O"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="D"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+
+                                    <!-- Fila 8: AMOR (R) -->
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="R"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
@@ -291,13 +331,13 @@
                             <!-- Columna Lateral: Definiciones y Campos de Respuesta -->
                             <div class="columna-definiciones">
                                 <h3>Definiciones: Valores y Sentimientos</h3>
-                                
+
                                 <div class="bloque-pista">
                                     <div class="titulo-pista">1. Horizontal (7 letras)</div>
                                     <div class="texto-pista">Valor fundamental universitario que implica reconocer, apreciar y valorar a los demás y a sus derechos.</div>
                                     <div class="campo-respuesta">
                                         <label for="v_p1">Respuesta:</label>
-                                        <input type="text" id="v_p1" name="v_p1" placeholder="EJ: RESPETO" maxlength="15">
+                                        <input type="text" id="v_p1" name="v_p1" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
 
@@ -306,7 +346,7 @@
                                     <div class="texto-pista">Capacidad socioemocional de ponerse en los zapatos de otra persona y comprender sus vivencias.</div>
                                     <div class="campo-respuesta">
                                         <label for="v_p2">Respuesta:</label>
-                                        <input type="text" id="v_p2" name="v_p2" placeholder="EJ: EMPATIA" maxlength="15">
+                                        <input type="text" id="v_p2" name="v_p2" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
 
@@ -315,7 +355,7 @@
                                     <div class="texto-pista">Sentimiento de devoción, fidelidad y compromiso que profesamos hacia los principios éticos y amigos.</div>
                                     <div class="campo-respuesta">
                                         <label for="v_p3">Respuesta:</label>
-                                        <input type="text" id="v_p3" name="v_p3" placeholder="EJ: LEALTAD" maxlength="15">
+                                        <input type="text" id="v_p3" name="v_p3" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
 
@@ -324,7 +364,7 @@
                                     <div class="texto-pista">Sentimiento supremo de cariño, afecto y fraternidad universal que une a las personas y a la comunidad.</div>
                                     <div class="campo-respuesta">
                                         <label for="v_p4">Respuesta:</label>
-                                        <input type="text" id="v_p4" name="v_p4" placeholder="EJ: AMOR" maxlength="15">
+                                        <input type="text" id="v_p4" name="v_p4" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
                             </div>
@@ -334,91 +374,101 @@
 
                     <!-- ==============================================================
                          PANEL 3: PERSONAJES HISTÓRICOS Y PELÍCULAS
+                         Cuadrícula 8 x 7
+                         1H ZAPATA  (fila 4, col 1)   2H COCO (fila 7, col 5)
+                         3V HIDALGO (col 6, fila 1)   4V NEMO (col 8, fila 4)
                          ============================================================== -->
                     <div class="panel-personajes" id="panel-personajes">
                         <div class="contenedor-layout-crucigrama">
-                            
+
                             <!-- Columna Central: Crucigrama -->
                             <div class="columna-crucigrama">
                                 <h3 style="color:#004A2F; margin-bottom: 10px;">Tablero de Crucigrama</h3>
                                 <p style="font-size:0.85rem; color:#555; margin-bottom:10px;">Guíate con las casillas numeradas:</p>
-                                
-                                <div class="cuadricula-crucigrama" style="grid-template-columns: repeat(7, 38px);">
-                                    <!-- Fila 1: ZAPATA (Horizontal 1) -->
-                                    <div class="celda-letra"><span class="numero-pista">1</span>Z</div>
-                                    <div class="celda-letra"><span class="numero-pista">3</span>A</div>
-                                    <div class="celda-letra">P</div>
-                                    <div class="celda-letra">A</div>
-                                    <div class="celda-letra">T</div>
-                                    <div class="celda-letra">A</div>
-                                    <div class="celda-vacia"></div>
 
-                                    <!-- Fila 2: Intersección V3 (H e I) -->
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-letra">H</div>
-                                    <div class="celda-vacia"></div>
+                                <div class="cuadricula-crucigrama" style="grid-template-columns: repeat(8, 38px);">
+                                    <!-- Fila 1: inicio de HIDALGO (3V) -->
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="H"><span class="numero-pista">3</span></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
 
-                                    <!-- Fila 3: Intersección V3 (I) -->
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-letra">I</div>
+                                    <!-- Fila 2: HIDALGO (I) -->
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
-
-                                    <!-- Fila 4: COCO (Horizontal 2) e intersección V4 (NEMO) -->
-                                    <div class="celda-letra"><span class="numero-pista">2</span>C</div>
-                                    <div class="celda-letra">O</div>
-                                    <div class="celda-letra">C</div>
-                                    <div class="celda-letra"><span class="numero-pista">4</span>O</div>
-                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="I"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
 
-                                    <!-- Fila 5: Intersección V3 (D) y V4 (M) -->
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-letra">D</div>
-                                    <div class="celda-vacia"></div>
-                                    <div class="celda-letra">M</div>
+                                    <!-- Fila 3: HIDALGO (D) -->
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
-
-                                    <!-- Fila 6: Intersección V3 (A) y V4 (E) -->
                                     <div class="celda-vacia"></div>
-                                    <div class="celda-letra">A</div>
                                     <div class="celda-vacia"></div>
-                                    <div class="celda-letra">E</div>
-                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="D"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
 
-                                    <!-- Fila 7: Intersección V3 (LGO) y V4 (N) -->
+                                    <!-- Fila 4: ZAPATA (1H), cruza HIDALGO en la A; inicio de NEMO (4V) -->
+                                    <div class="celda-letra" data-letra="Z"><span class="numero-pista">1</span></div>
+                                    <div class="celda-letra" data-letra="A"></div>
+                                    <div class="celda-letra" data-letra="P"></div>
+                                    <div class="celda-letra" data-letra="A"></div>
+                                    <div class="celda-letra" data-letra="T"></div>
+                                    <div class="celda-letra" data-letra="A"></div>
                                     <div class="celda-vacia"></div>
-                                    <div class="celda-letra">L</div>
+                                    <div class="celda-letra" data-letra="N"><span class="numero-pista">4</span></div>
+
+                                    <!-- Fila 5: HIDALGO (L) y NEMO (E) -->
                                     <div class="celda-vacia"></div>
-                                    <div class="celda-letra">N</div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
                                     <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="L"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="E"></div>
+
+                                    <!-- Fila 6: HIDALGO (G) y NEMO (M) -->
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="G"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="M"></div>
+
+                                    <!-- Fila 7: COCO (2H), cruza HIDALGO y NEMO en sus letras O -->
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-vacia"></div>
+                                    <div class="celda-letra" data-letra="C"><span class="numero-pista">2</span></div>
+                                    <div class="celda-letra" data-letra="O"></div>
+                                    <div class="celda-letra" data-letra="C"></div>
+                                    <div class="celda-letra" data-letra="O"></div>
                                 </div>
                             </div>
 
                             <!-- Columna Lateral: Definiciones y Campos de Respuesta -->
                             <div class="columna-definiciones">
                                 <h3>Definiciones: Personajes y Películas</h3>
-                                
+
                                 <div class="bloque-pista">
                                     <div class="titulo-pista">1. Horizontal (6 letras)</div>
                                     <div class="texto-pista">Emiliano, caudillo del sur y héroe de la Revolución Mexicana cuyo lema fue 'Tierra y Libertad'.</div>
                                     <div class="campo-respuesta">
                                         <label for="h_p1">Respuesta:</label>
-                                        <input type="text" id="h_p1" name="h_p1" placeholder="EJ: ZAPATA" maxlength="15">
+                                        <input type="text" id="h_p1" name="h_p1" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
 
@@ -427,7 +477,7 @@
                                     <div class="texto-pista">Aclamada película animada de Disney Pixar que retrata la tradición mexicana del Día de Muertos y a Miguel Rivera.</div>
                                     <div class="campo-respuesta">
                                         <label for="h_p2">Respuesta:</label>
-                                        <input type="text" id="h_p2" name="h_p2" placeholder="EJ: COCO" maxlength="15">
+                                        <input type="text" id="h_p2" name="h_p2" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
 
@@ -436,7 +486,7 @@
                                     <div class="texto-pista">Don Miguel, cura de Dolores considerado el Padre de la Patria que proclamó el Grito de Independencia en 1810.</div>
                                     <div class="campo-respuesta">
                                         <label for="h_p3">Respuesta:</label>
-                                        <input type="text" id="h_p3" name="h_p3" placeholder="EJ: HIDALGO" maxlength="15">
+                                        <input type="text" id="h_p3" name="h_p3" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
 
@@ -445,7 +495,7 @@
                                     <div class="texto-pista">Pequeño y simpático pez payaso que se pierde en el arrecife en una famosa película marina de Pixar.</div>
                                     <div class="campo-respuesta">
                                         <label for="h_p4">Respuesta:</label>
-                                        <input type="text" id="h_p4" name="h_p4" placeholder="EJ: NEMO" maxlength="15">
+                                        <input type="text" id="h_p4" name="h_p4" placeholder="Escribe tu respuesta" maxlength="15">
                                     </div>
                                 </div>
                             </div>
